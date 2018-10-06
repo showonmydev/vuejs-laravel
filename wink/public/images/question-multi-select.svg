@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="17px" height="17px" viewBox="0 0 17 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+    <title>ios-list-outline</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="ios-list-outline" transform="translate(1.000000, 1.000000)" fill-rule="nonzero" fill="#28A8D3">
+            <g id="Group" stroke="#28A8D3">
+                <path d="M14.375,0.625 L14.375,14.375 L0.625,14.375 L0.625,0.625 L14.375,0.625 L14.375,0.625 Z M0,1 L0,14 L0,14 C6.76353751e-17,14.5522847 0.44771525,15 1,15 L14,15 L14,15 C14.5522847,15 15,14.5522847 15,14 L15,1 L15,1 C15,0.44771525 14.5522847,-1.01453063e-16 14,0 L1,0 L1,0 C0.44771525,1.01453063e-16 -6.76353751e-17,0.44771525 0,1 Z" id="Shape"></path>
+                <rect id="Rectangle-path" x="5" y="3.4375" width="3" height="1"></rect>
+                <rect id="Rectangle-path" x="5" y="7.1875" width="5" height="1"></rect>
+                <rect id="Rectangle-path" x="5" y="10.9375" width="2" height="1"></rect>
+            </g>
+            <circle id="Oval" cx="3.125" cy="3.75" r="1"></circle>
+            <circle id="Oval" cx="3.125" cy="7.5" r="1"></circle>
+            <circle id="Oval" cx="3.125" cy="11.25" r="1"></circle>
+        </g>
+    </g>
+</svg>

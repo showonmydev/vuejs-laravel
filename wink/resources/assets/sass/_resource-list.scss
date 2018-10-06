@@ -1,0 +1,97 @@
+.resourcelist {
+    // border-top: 1px solid $border-grey;
+    margin-top: 20px;
+    ol {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        .dragged {
+            position: absolute;
+            opacity: 0.5;
+            z-index: 2000;
+        }
+        .placeholder {
+            position: relative;
+        }
+        .placeholder:before {
+            position: absolute;
+            content: "";
+            width: 0;
+            height: 0;
+            margin-top: -5px;
+            left: -5px;
+            top: -4px;
+            border: 5px solid transparent;
+            border-left-color: #2da9d7;
+            border-right: none;
+        }
+    }
+    &__title {
+        margin: 0;
+    }
+    &__header{
+        border-bottom: 1px solid $border-grey;
+        color: $table-grey;
+        padding: 5px 0;
+        position: relative;
+        h5{
+            font-size: 14px;
+            font-weight: 600;
+        }
+    }
+    &__item {
+        border-bottom: 1px solid $border-grey;
+        color: #828ea6;
+        font-size: 14px;
+        padding: 20px 5px 10px;
+        position: relative;
+        form {
+            margin: 0;
+        }
+    }
+    &__action {
+
+        &:hover, &:focus{
+            outline: none;
+            text-decoration: none;
+        }
+
+        &:after {
+            color: $light-grey;
+            content: '\2807';
+            font-size: 20px;
+            position: relative;
+            top: -4px;
+        }
+    }
+    &__popover{
+        margin-bottom: 0;
+        li a{
+            color: $grey;
+            display: block;
+            margin: 2px 0;
+        }
+    }
+    &__name {
+        color: $grey;
+        font-size: 14px;
+        margin: 0;
+    }
+    &__collapse {
+        .well {
+            margin-top: 10px;
+        }
+    }
+    &__destroy {
+        background-color: transparent;
+        border: none;
+        color: $light-grey;
+        font-size: 16px;
+        margin-right: 13px;
+    }
+    &__edit {
+        font-size: 11px;
+        margin-left: 10px;
+        padding: 0 6px;
+    }
+}

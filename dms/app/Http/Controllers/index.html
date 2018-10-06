@@ -1,0 +1,168 @@
+<!DOCTYPE html><html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>my-project</title><link href=https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css rel=stylesheet><link rel=stylesheet href=static/bootstrap.min.css><link rel=stylesheet href=//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css><script src=static/jQuery.min.js></script><script src=static/bootstrap.min.js></script><script src=static/jquery-1.12.4.js></script><script src=https://code.jquery.com/ui/1.12.1/jquery-ui.js></script><script src=http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js></script><script src=static/jquery.dragtable.js></script><link rel=stylesheet type=text/css href=static/dragtable.css><script src=http://code.jquery.com/jquery-migrate-1.1.1.js></script><script type=text/javascript src=http://akottr.github.io/js/jquery.chili-2.2.js></script><script>const AUTH_REDIRECT_URL = "https://devtest.secact.in/dms_api/public/login/benq"
+  const API_URL = "https://devtest.secact.in/dms_api/public/api/"
+  $(document).ready(function() {
+    // var widths =  $('.currWidth').val();
+    $('.contextMenu').hide();
+    $('.main-right-sidebar').attr('style','max-width:606 !important;')
+    $('#footerTable').dragtable({dragaccept:'.accept'});
+    $( function() {
+        var sideIn = $('#also').width();
+        var mainSideBar = $('.main-right-sidebar').width();
+        $( ".centerBar" ).resizable({
+        minWidth: 510,
+        maxWidth: 1010,
+        //alsoResize: "#also",
+        resize: function( event, ui ) {
+                var widths = $('.currWidth').val();
+                //$('.main-right-sidebar').attr('style','right:0');
+                var wi = parseInt(widths) - parseInt(ui.size.width)
+                //var wi = parseInt(ui.size.width) - parseInt(widths)
+                var main = parseInt(mainSideBar) - parseInt(wi)
+                console.log('Side'+widths);
+                console.log(ui.size.width);
+                console.log('wi'+wi);
+                if($('.content-wrapper').width() === 510){
+                       $('#also').width(574)
+                } else {
+                    $('.right-sidebar-toggle .glyphicon-backward').addClass('glyphicon-forward')
+                    $('.right-sidebar-toggle .glyphicon-forward').removeClass('glyphicon-backward')
+                    if ($('.content-wrapper').width() <= 510) {
+                        //$('#also').width(Math.abs(wi)+sideIn-20);
+                        $('#also').width(Math.abs(wi)+sideIn);
+                    } else {
+                        $('#also').width(Math.abs(wi)+sideIn);
+                        //$('#also').width(Math.abs(wi)+sideIn-20);
+                    }
+                }
+          }
+        });
+        //$( "#also" ).resizable();
+    } );
+    $('span').click(function() {
+        setTimeout(function(){
+            $("table tr, table tr td").resizable({handles: 'e'})
+        }, 500);
+    })
+    $('#submenu-1 .groupInspan').click(function(){
+        $('#submenu-1 span').removeClass('active');
+        $(this).parents("span").addClass('active');
+    });
+
+    $(document).on('click', '.fa-caret-down', function() {
+        console.log('LEFt')
+        $(this).addClass('fa-caret-right')
+        $(this).removeClass('fa-caret-down')
+    });
+
+    $(document).on('click', '.fa-caret-right', function() {
+        console.log('RIGHT')
+        $(this).addClass('fa-caret-down');
+        $(this).removeClass('fa-caret-right');
+    });
+
+    });</script><link href=https://devtest.secact.in/dms/static/css/app.e3c07f4f017f125926ab24851d24f11c.css rel=stylesheet></head><body><input type=hidden name=currWidth class=currWidth value=1010> <input type=file accept=.csv id=uploadCSV class=hide> <input type=button id=UploadCSVFinal1 class=hide><div id=app></div><script type=text/javascript src=https://devtest.secact.in/dms/static/js/manifest.d36b6644df871a260102.js></script><script type=text/javascript src=https://devtest.secact.in/dms/static/js/vendor.59366691266117183809.js></script><script type=text/javascript src=https://devtest.secact.in/dms/static/js/app.0ca49e067d4ab6077f37.js></script></body></html><script>$(document).ready(function() {
+    var fd = new FormData();
+    $('#uploadCSV').change(function(){
+        fd.append('file', this.files[0]); // since this is your file input
+        fd.append('account_id', '1');
+        fd.append('token', 'XYZ');
+    });
+    $('#UploadCSVFinal1').click(function(){
+        $.ajax({
+            url: 'http://devtest.secact.in/dms_api/public/api/device/uploadcsv',
+            type: "post",
+            dataType: 'json',
+            processData: false, // important
+            contentType: false, // important
+            data: fd,
+            success: function(text) {
+                alert(text);
+                if(text == "success") {
+                    alert("Your Device was uploaded successfully");
+                }
+            },
+            error: function() {
+                alert("An error occured, please try again.");         
+            }
+        });
+    });
+
+  $(function(){
+      $('[data-toggle="tooltip"]').tooltip();
+      $(".side-nav .collapse").on("hide.bs.collapse", function() {                   
+          $(this).prev().find(".fa").eq(1).removeClass("fa-angle-right").addClass("fa-angle-down");
+      });
+      $('.side-nav .collapse').on("show.bs.collapse", function() {                        
+          $(this).prev().find(".fa").eq(1).removeClass("fa-angle-down").addClass("fa-angle-right");        
+      });
+  })    
+  
+
+  $(".setsize").each(function() {
+        $(this).height($(this).width());
+    });
+$(window).on('resize', function(){
+    $(".setsize").each(function() {
+        $(this).height($(this).width());
+    });
+});
+        });</script><script>$(document).ready(function() {
+        $(".right-sidebar-toggle").click(function () {
+        //$("body").toggleClass('sidebar-collapse');
+        if($('.lftbar').css('display') != 'none' &&  $('.main-right-sidebar').width() <= 85 ){
+            $('.right-sidebar-toggle .glyphicon-backward').addClass('glyphicon-forward')
+            $('.right-sidebar-toggle .glyphicon-forward').removeClass('glyphicon-backward')
+            $('.lftbar').hide()
+            $('.centerBar').width('58%')
+            $('.main-right-sidebar').width('42%')
+            // Fix the sidebar Width
+            $('.currWidth').val('1284');
+            $( ".centerBar" ).resizable( "option", "maxWidth", '1284' );
+            $( ".centerBar" ).resizable( "option", "minWidth", '774' );
+            console.log('INN')
+            
+        }else{
+            $('.right-sidebar-toggle .glyphicon-forward').addClass('glyphicon-backward')
+            $('.right-sidebar-toggle .glyphicon-backward').removeClass('glyphicon-forward')
+            $('.lftbar').show()
+            $('.centerBar').width('74%')
+            $('.main-right-sidebar').width('6%')
+            // Fix the sidebar Width
+            $('.currWidth').val('1010');
+            $(".centerBar").resizable( "option", "maxWidth", '1010' );
+            $( ".centerBar" ).resizable( "option", "minWidth", '510' );
+            console.log('INN1')
+        }
+        
+    });
+    $(".left-sidebar-toggle").click(function () {
+        //$("body").toggleClass('leftsidebar-collapse');
+        if($('.lftbar').css('display') != 'none'){
+            $('.left-sidebar-toggle .glyphicon-backward').addClass('glyphicon-forward')
+            $('.left-sidebar-toggle .glyphicon-forward').removeClass('glyphicon-backward')
+
+            $('.lftbar').hide()
+            $('#resizable').attr('style','max-width:100%');
+            $('.centerBar').width('94%')
+            $('.main-right-sidebar').width('81.7px');
+            // Fix the sidebar Width
+            $('.currWidth').val('1284');
+            $( ".centerBar" ).resizable( "option", "maxWidth", '1284' );
+            $( ".centerBar" ).resizable( "option", "minWidth", '774' );
+            console.log('INN')
+        }else{
+            $('.left-sidebar-toggle .glyphicon-forward').addClass('glyphicon-backward')
+            $('.left-sidebar-toggle .glyphicon-backward').removeClass('glyphicon-forward')
+
+            $('.lftbar').show()
+            $('#resizable').attr('style','max-width:1040px');
+            $('.centerBar').width('74%')
+            $('.main-right-sidebar').width('6%');
+            // Fix the sidebar Width
+            $('.currWidth').val('1010');
+            $(".centerBar").resizable( "option", "maxWidth", '1010' );
+            $( ".centerBar" ).resizable( "option", "minWidth", '510' );
+            console.log('INN1')
+        }
+    });
+});</script>

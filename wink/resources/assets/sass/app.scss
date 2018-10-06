@@ -1,0 +1,43 @@
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+@import "variables";
+@import "utils";
+
+// Base setup
+@import "layout";
+@import "fonts";
+@import "icons";
+@import "ionicons/ionicons";
+@import "form";
+@import "buttons";
+@import "tables";
+@import "select";
+@import "maps";
+@import "popover";
+@import "resource-list";
+
+@import "header";
+@import "footer";
+
+// Blocks
+@import "section";
+@import "side-panel";
+
+// Pages
+@import "register";
+@import "login";
+@import "dashboard";
+@import "brands";
+@import "locations";
+@import "teams";
+@import "campaigns";
+@import "tasks";
+@import "reports";
+@import "settings";
+
+@import "sweetalert";
+//@import "notify";
+//@import "lightbox";
+
+//@import "tinymce/tiny-combined";
+

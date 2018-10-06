@@ -1,0 +1,46 @@
+
+.btn-primary {
+    @include button-variant($white, $blue, $blue);
+}
+
+.btn-grey {
+    @include button-variant($grey, #e6e7e8, #e6e7e8);
+    border-radius: 2px;
+    font-size: 12px;
+    padding: 0 2px;
+    text-transform: uppercase;
+}
+
+.btn-outline{
+    @include button-variant($white, $blue, #96d4eb);
+    border-width: 2px;
+
+    &:hover, &:focus, &:active, &:active:focus{
+        background-color: $blue;
+        border-color: $white;
+        box-shadow: none;
+        outline: 0;
+        &:before{
+            font-weight: 700;
+        }
+    }
+}
+
+.btn.icon-plus:before{
+    content: "\2b";
+}
+
+.btn{
+    &[class*="icon"]{
+        &:before{
+            font-family: 'Glyphicons Halflings';
+            margin-right: 5px;
+        }
+    }
+}
+
+.no-button{
+    border: none;
+    background: none;
+    padding: 0;
+}

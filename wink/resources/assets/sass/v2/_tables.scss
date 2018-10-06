@@ -1,0 +1,157 @@
+.table {
+  background-color: $white;
+  border-radius: 4px;
+  border: solid 1px $pale-grey-two;
+  margin-bottom: 50px;
+  > tbody {
+    > tr {
+      border-bottom: solid 1px $pale-grey-two;
+      height: 60px;
+      padding: 3px 30px 3px 0;
+
+      > td {
+
+        background-color: #fff;
+        color: #828ea6;
+        font-size: 14px;
+        padding: 20px 5px 20px;
+        vertical-align: middle;
+        border:none;
+
+        &:first-child {
+          padding-left: 20px;
+        }
+
+        a {
+          color: $table-grey;
+        }
+
+        .action {
+          display: inline-block;
+          height: 20px;
+
+          &:hover, &:focus {
+            outline: none;
+            text-decoration: none;
+          }
+
+          &:after {
+            color: $light-grey;
+            content: '\2807';
+            font-size: 20px;
+            position: relative;
+            top: -4px;
+          }
+        }
+      }
+    }
+  }
+
+  &__chars {
+    color: #fff;
+    display: inline-block;
+    font-size: 12px;
+    height: 34px;
+    width: 34px;
+    padding: 10px 0px;
+    text-transform: uppercase;
+    margin-right: 22px;
+    text-align: center;
+    border-radius: 5px;
+
+    &.red {
+      background-color: #f79779;
+    }
+    &.green {
+      background-color: #70c1b9;
+    }
+    &.yellow {
+      background-color: #f6d258;
+    }
+
+    &.blue1 {
+      background-color: #9291d0
+    }
+
+    &.green1 { 
+      background-color: #73bec8
+    }
+
+    &.blue2 {  
+      background-color: #4b6bc6
+    }
+
+    &.green2 {    
+      background-color: #2ab27b
+    }
+
+    &.pink1 {
+      background-color: #e32072
+    }
+
+    &.yellow1 {  
+      background-color: #edb431
+    }
+
+    &.green3 {  
+      background-color: #7dbb91
+    }
+    &.blue3 {     
+      background-color: #5aaa8f
+    }
+    &.brown {     
+      background-color: #d0a463
+    }
+    &.pink2 {    
+      background-color: #ef8a78
+    }
+    &.purple2 {    
+      background-color: #c384c5
+    }
+    &.green4 {    
+      background-color: #739dc5
+    }
+  }
+
+}
+
+.submissions-table{
+  border: 0px;
+  background: none;
+
+  > tbody {
+    > tr {
+      border: solid 0px $pale-grey-two;
+      height: 60px;
+      padding: 3px 30px 3px 0;
+
+      > td {
+        color: #828ea6;
+        font-size: 14px;
+        padding: 15px 10px 20px;
+        vertical-align: top;
+        border:none;
+        border: 0px;
+      }
+    }
+
+
+  }
+}
+
+.reportThumbBig {
+    list-style: none;
+    margin: 5px 0 5px 5px;
+    min-width: 65px;
+    min-height: 65px;
+    float: right;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+    margin: 20px;
+    max-width: 90%;
+    margin: 20px
+}

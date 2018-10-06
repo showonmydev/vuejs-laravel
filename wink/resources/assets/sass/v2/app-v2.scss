@@ -1,0 +1,55 @@
+
+@font-face {
+    font-family: 'icomoon';
+    src:  url('/fonts/icomoon/icomoon.eot?f98xil');
+    src:  url('/fonts/icomoon/icomoon.eot?f98xil#iefix') format('embedded-opentype'),
+    url('/fonts/icomoon/icomoon.ttf?f98xil') format('truetype'),
+    url('/fonts/icomoon/icomoon.woff?f98xil') format('woff'),
+    url('/fonts/icomoon/icomoon.svg?f98xil#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@import "variables";
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+//@import "utils";
+
+.v2{
+    // Base setup
+    @import "layout";
+
+    //@import "icons";
+    //@import "ionicons/ionicons";
+    @import "forms";
+    @import "buttons";
+    @import "tables";
+    @import "animations";
+    //@import "select";
+    //@import "maps";
+    //@import "popover";
+    //@import "resource-list";
+    @import "overlay";
+    @import "fonts";
+
+    @import "header";
+    //@import "footer";
+    //
+    //// Blocks
+    //@import "section";
+    //@import "side-panel";
+    //
+    //// Pages
+    //@import "register";
+    //@import "login";
+    @import "dashboard";
+    @import "projects";
+    @import "locations";
+    //@import "brands";
+    //@import "locations";
+    //@import "teams";
+    //@import "campaigns";
+    //@import "tasks";
+    @import "reports";
+    @import "question";
+    //@import "settings";
+}

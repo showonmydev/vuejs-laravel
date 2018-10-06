@@ -1,0 +1,5 @@
+
+Laravel development server started: <http://127.0.0.1:8901>
+[Thu Nov 16 13:17:22 2017] Failed to listen on 127.0.0.1:8901 (reason: Address already in use)
+Laravel development server started: <http://127.0.0.1:80>
+[Thu Nov 16 13:24:07 2017] Failed to listen on 127.0.0.1:80 (reason: Permission denied)

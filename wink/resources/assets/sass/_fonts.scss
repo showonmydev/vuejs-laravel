@@ -1,0 +1,27 @@
+@import url(https://fonts.googleapis.com/css?family=Varela+Round);
+
+body{
+    color: #9a9b9b;
+    font-family: $valelaRound;
+    font-weight: 300;
+}
+
+h2, .h2{
+    margin: 0;
+}
+
+h5, .h5{
+    font-size: 15px;
+    font-weight: 700;
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+.white{ color: $white; }
+.light-blue{ color: $light-blue; }
+
+.light{
+    font-weight: 300;
+}

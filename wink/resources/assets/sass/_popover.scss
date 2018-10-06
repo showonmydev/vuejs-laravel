@@ -1,0 +1,23 @@
+.popover{
+    ul{
+        padding: 0;
+        margin: 0;
+
+        a{
+            color: $grey;
+        }
+        form{
+            margin: 0;
+        }
+        button{
+            background: transparent;
+            border: none;
+            color: $grey;
+            padding: 0;
+
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+}

@@ -1,0 +1,119 @@
+@import url(https://fonts.googleapis.com/css?family=Varela+Round);
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-star-full:before {
+  content: "\e903";
+}
+.icon-star-half:before {
+  content: "\e904";
+}
+.icon-globe:before {
+  content: "\e900";
+}
+.icon-scanner:before {
+  content: "\e901";
+}
+.icon-star:before {
+  content: "\e902";
+}
+
+body{
+    color: #9a9b9b;
+    font-family: $valelaRound !important;
+    font-weight: 300;
+}
+
+h1, .h1{
+    font-family: $valelaRound;
+    font-size: 26px;
+    letter-spacing: -0.7px;
+    color: #3c4858;
+    margin: 0;
+    font-weight: 300;
+}
+h2, .h2{
+    margin: 0;
+}
+
+h4, .h4{
+    font-size: 16px;
+    color: $slate;
+}
+
+h5, .h5{
+    font-size: 15px;
+    font-weight: 700;
+}
+a:hover{
+    text-decoration: none;
+}
+.white{ color: $white; }
+.light-blue{ color: $light-blue; }
+.light{
+    font-weight: 300;
+}
+
+.page-subtext {
+    font-size: 16px;
+    letter-spacing: -0.5px;
+    color: $bluegrey;
+}
+
+.list-main {
+    font-size: 14px;
+    letter-spacing: -0.4px;
+    color: $slate;
+}
+
+.list-secondary {
+    font-size: 13px;
+    line-height: 1.23;
+    letter-spacing: -0.4px;
+    color: $bluegrey;
+}
+
+/*
+    Colours
+ */
+
+$tealish: #28a8d3;
+$faded-green: #74b069;
+$bg-grey: #f9f9fb;
+$pale-grey-two: #e0e6ed;
+$deep-lilac: #847ab9;
+$bluegrey: #8492a6;
+$slate: #3c4858;
+
+.-tealish{color: $tealish}
+.-faded-green{color: $faded-green}
+.-bluegrey{color: $bluegrey}
+.-slate{color: $slate}
+
+/*
+    Page Styles
+ */
+.page__subtext{
+    font-family: $valelaRound;
+    font-size: 16px;
+    letter-spacing: -0.5px;
+    color: #bcc4ce;
+    margin-right: 25px;
+
+    &.active{
+        color: #8795a8;
+    }
+}

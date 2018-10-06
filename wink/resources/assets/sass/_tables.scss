@@ -1,0 +1,89 @@
+.table{
+    margin-top: 20px;
+
+    > thead:first-child{
+        > tr:first-child{
+            th{
+                border-bottom: none;
+                color: #8795a8;
+                font-size: 14px;
+                font-weight: 300;
+                padding: 20px 5px 10px 10px;
+
+                button{
+                    background: transparent;
+                    border: none;
+                    padding: 0;
+
+                    &:focus, &:active{
+                        outline: none;
+                    }
+
+                    &:after{
+                        content: '\f3d0';
+                        font-family: 'Ionicons';
+                        margin-left: 15px;
+
+                    }
+
+                    &.asc{
+                        &:after{
+                            content: '\f3d0';
+                        }
+                    }
+                    &.desc{
+                        &:after{
+                            content: '\f3d8';
+                        }
+                    }
+                }
+            }
+        }
+    }
+    > tbody{
+        > tr{
+            &:last-child{
+                > td{
+                    border-bottom: 1px solid #e6e7e8;
+                }
+            }
+            > td{
+                border-color: #e6e7e8;
+                color: #828ea6;
+                font-size: 13px;
+                padding: 20px 5px 20px;
+
+                &:first-child{
+                    color: $table-grey;
+                    font-size: 14px;
+                }
+
+                &:last-child{
+                    border-bottom: 1px solid #e6e7e8;
+                }
+
+                a{
+                    color: $table-grey;
+                }
+
+                .action{
+                    display: inline-block;
+                    height: 20px;
+
+                    &:hover, &:focus{
+                        outline: none;
+                        text-decoration: none;
+                    }
+
+                    &:after {
+                        color: $light-grey;
+                        content: '\2807';
+                        font-size: 20px;
+                        position: relative;
+                        top: -4px;
+                    }
+                }
+            }
+        }
+    }
+}

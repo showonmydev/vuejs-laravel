@@ -1,0 +1,108 @@
+.report {
+
+    &-wrap {
+        display: flex;
+        flex-wrap: wrap;
+        margin:  0 -15px;
+        width: 100%;
+    }
+    
+    &-card {
+        background-color: $white;
+        border-radius: 8px;
+        border: solid 1px $pale-grey-two;
+        box-shadow: 0 1px 1px 0 rgba(31, 45, 61, 0.05);
+        flex-shrink: 1;
+        justify-content: center;
+        padding: 19px;
+        margin: 1.2%;
+        height: 250px;
+        overflow: hidden;
+        width: 22.6%;
+    }
+}
+
+.reportThumb{
+    list-style: none;
+    margin: 5px 0 5px 5px;
+    min-width: 65px;
+    min-height: 65px;
+    width: calc(33.33% - 5px);
+    float: left;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right
+}
+
+.report-nav{
+    li{
+        a.active, a:hover {
+            padding-bottom: 20px;
+            border-bottom: 2px solid #28a8d3;
+        }
+    }
+}
+
+.swal-wide{
+    max-height: 90% !important
+}
+
+.submission-pagination{
+    float: right;
+    font-size: 16px;
+    letter-spacing: -0.5px;
+    color: #8795a8;
+    margin-right: 50px;
+
+    .next{
+        font-size: 29px;
+        margin-left: 10px;
+        line-height: 19px;
+        margin-bottom: 0px;
+        float: right;
+        cursor: pointer
+    }
+
+    .prev{
+        font-size: 29px;
+        margin-right: 10px;
+        line-height: 19px;
+        margin-bottom: 0px;
+        float: left;
+        cursor: pointer
+    }
+
+    .total{
+
+    }
+    
+    .current{
+
+    }
+}
+
+.submission-map img{
+    float: left;
+    margin: 0px 20px 0px 0px;
+    height: 50px;
+    border-radius: 10px;
+}
+
+
+.modal-image{
+    max-height: 70vh;
+    max-width: 100%;
+    width: auto !important;
+    height: auto !important;
+}
+
+.mark_result {
+    padding: 10px 20px;
+    background: #EEE;
+    margin-left: 20px;
+    border-radius: 10px;
+    color: green;
+}

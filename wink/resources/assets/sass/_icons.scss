@@ -1,0 +1,21 @@
+.icon {
+
+	&--small {
+		display: inline-block;
+		vertical-align: middle;
+		font-size: 16px;
+	}
+
+	&--medium {
+		display: inline-block;
+		vertical-align: middle;
+		font-size: 24px;
+	}
+
+	&--large {
+		display: inline-block;
+		vertical-align: middle;
+		font-size: 36px;
+	}
+
+}

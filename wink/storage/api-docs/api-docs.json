@@ -1,0 +1,231 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "WinkHQ API",
+        "description": "The API routes available for external use from WinkHQ",
+        "contact": {
+            "name": "IBSA Developers",
+            "email": "developers@incendiaryblue.com"
+        },
+        "version": "1.0"
+    },
+    "host": "winkhq.com",
+    "basePath": "/v1/",
+    "schemes": [
+        "http"
+    ],
+    "consumes": [
+        "application/json"
+    ],
+    "produces": [
+        "application/json"
+    ],
+    "paths": {
+        "/answers/{$task_id}}": {
+            "get": {
+                "tags": [
+                    "save_answers"
+                ],
+                "summary": "Save tassk andwer submission",
+                "description": "Submit answers for a task",
+                "operationId": "single",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Task ID",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "data",
+                        "in": "query",
+                        "description": "Json array of answers",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "404": {
+                        "description": "Tasks not found"
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/tasks/{$lat}/{$long}": {
+            "get": {
+                "tags": [
+                    "tasks"
+                ],
+                "summary": "Get all tasks that user can checkout",
+                "description": "Get all tasks a user can checkout. The return will be a JSON object containing an array of available tasks",
+                "operationId": "single",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "lat",
+                        "in": "path",
+                        "description": "INT",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "long",
+                        "in": "path",
+                        "description": "INT",
+                        "required": false,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Task"
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Tasks not found"
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/task/{id}": {
+            "get": {
+                "tags": [
+                    "tasks"
+                ],
+                "summary": "Get a single task by ID",
+                "description": "Get a task by its ID. The return will be a JSON block with the task and its questions defined",
+                "operationId": "single",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "INT",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Task"
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Task not found"
+                    }
+                },
+                "deprecated": false
+            }
+        }
+    },
+    "definitions": {
+        "Timestamps": {
+            "properties": {
+                "created_at": {
+                    "description": "Creation date",
+                    "type": "string",
+                    "format": "date-time",
+                    "example": "2017-03-01 00:00:00"
+                },
+                "updated_at": {
+                    "description": "Last updated",
+                    "type": "string",
+                    "format": "date-time",
+                    "example": "2017-03-01 00:00:00"
+                }
+            }
+        },
+        "Task": {
+            "required": [
+                "company_id"
+            ],
+            "properties": {
+                "company_id": {
+                    "description": "The company ID",
+                    "type": "int",
+                    "example": "1"
+                },
+                "campaign_id": {
+                    "description": "The ID of the campaign",
+                    "type": "int",
+                    "example": "1"
+                },
+                "location_id": {
+                    "description": "The ID of the location",
+                    "type": "int",
+                    "example": "1"
+                },
+                "wave_id": {
+                    "description": "The ID of the wave this task is linked to",
+                    "type": "int",
+                    "example": "1"
+                },
+                "checked_out": {
+                    "description": "Is the task checked out currently",
+                    "type": "bool",
+                    "example": "1"
+                },
+                "checked_out_start": {
+                    "description": "Date the checked out task started",
+                    "type": "string",
+                    "format": "date-time",
+                    "example": "2017-03-01 00:00:00"
+                },
+                "checked_out_id": {
+                    "description": "The ID of the user who has currently checked out this task",
+                    "type": "int",
+                    "example": "1"
+                },
+                "in_progress": {
+                    "description": "Is the task currently in progress",
+                    "type": "bool",
+                    "example": "1"
+                },
+                "submitted": {
+                    "description": "Has the task been submitted with answers",
+                    "type": "bool",
+                    "example": "1"
+                },
+                "approved": {
+                    "description": "Has the task been approved / accepted",
+                    "type": "bool",
+                    "example": "1"
+                },
+                "complete": {
+                    "description": "Is the task complete",
+                    "type": "bool",
+                    "example": "1"
+                },
+                "end_date": {
+                    "description": "The end date of the task",
+                    "type": "string",
+                    "format": "date-time",
+                    "example": "2017-03-01 00:00:00"
+                }
+            }
+        }
+    }
+}

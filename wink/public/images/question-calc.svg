@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="288px" height="384px" viewBox="0 0 288 384" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50 (54983) - http://www.bohemiancoding.com/sketch -->
+    <title>ios-calculator</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="ios-calculator" fill="#21D439" fill-rule="nonzero">
+            <path d="M256,0 L32,0 C14.3,0 0,14.3 0,32 L0,352 C0,369.7 14.3,384 32,384 L256,384 C273.7,384 288,369.7 288,352 L288,32 C288,14.3 273.7,0 256,0 Z M248,216 L248,344 L200,344 L200,216 L248,216 Z M248,136 L248,184 L200,184 L200,136 L248,136 Z M168,296 L168,344 L120,344 L120,296 L168,296 Z M168,216 L168,264 L120,264 L120,216 L168,216 Z M168,136 L168,184 L120,184 L120,136 L168,136 Z M88,296 L88,344 L40,344 L40,296 L88,296 Z M88,216 L88,264 L40,264 L40,216 L88,216 Z M88,136 L88,184 L40,184 L40,136 L88,136 Z M40,88 L40,40 L248,40 L248,88 L40,88 Z" id="Shape"></path>
+        </g>
+    </g>
+</svg>

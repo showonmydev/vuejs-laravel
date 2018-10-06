@@ -1,0 +1,46 @@
+.edit-dropdown{
+  width: 20px;
+  height: 20px;
+  position:relative;
+  margin-right: 20px;
+
+  &:after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-right: 5px solid #696c74;
+    position: absolute;
+    right: 0;
+    top: 10px;
+    transition-duration: 0.8s;
+    transition-property: -webkit-transform;
+    transition-property: transform;
+    transition-property: transform, -webkit-transform;
+    transform: rotate(-90deg);
+  }
+
+}
+
+#location-map {
+  height: 175px;
+  margin-bottom: 15px;
+}
+
+.select2-container{
+  margin-bottom: 15px;
+}
+
+.form-label {
+  span {
+    color: #b2b5bc;
+    font-size: 12px;
+    font-weight: 300;
+    margin-left: 10px;
+  }
+}
+
+.select2-search__field{
+  margin: 10px !important;
+}

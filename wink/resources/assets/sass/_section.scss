@@ -1,0 +1,17 @@
+.section{
+    &__header{
+
+    }
+    &__title{
+        font-size: 18px;
+        font-weight: 700;
+        margin: 5px 15px 0 0;
+        float: left;
+    }
+    &__remaining{
+        color: $light-grey;
+        font-size: 12px;
+        font-weight: 700;
+        float: left;
+    }
+}

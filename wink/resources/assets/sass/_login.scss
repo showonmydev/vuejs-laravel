@@ -1,0 +1,34 @@
+#login{
+    .logo{
+        margin-top: 100px;
+        text-align: center;
+        img{
+            max-width: 120px;
+        }
+    }
+    form{
+        padding: 20px;
+
+        label{
+            color: #ababab;
+            font-weight: 400;
+            text-transform: uppercase;
+        }
+        .form-control{
+            color: #686868;
+            font-weight: 400;
+        }
+
+    }
+    p{
+        color: #adadad;
+        text-align: center;
+
+        a{
+            color: #959595;
+        }
+    }
+    .alert{
+        margin-top: 30px;
+    }
+}
